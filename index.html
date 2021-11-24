@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="index.js" defer></script>
+    <title>Calculadora EPE V1.0</title>
+</head>
+<body>
+    <form id="container" class="container">
+        <div class="container-logo">
+            <img src="img/logo.png" alt="">
+        </div>      
+        <div class="container-form">
+            <div class="container-form-radio">
+                <p>Tipo de usuario:</p>
+                <div class="container-form-radio-input-label">
+                    <label><input type="radio" name="iva" id="iva_residencial" value="residencial">Residencial: aplica IVA 21%<br></label>
+                    <label><input type="radio" name="iva" id="iva_industrial" value="industrial">Industrial: aplica IVA 27%<br></label>
+                </div>
+            </div>
+            <div class="container-form-option">
+                <p>Zona del domicilio:</p>
+                <select id="zona" name="" form="">
+                    <option value="0"> - Selecciona una opción - </option>
+                    <option value="Centro">Distrito Centro: $5,80 por kWh</option>
+                    <option value="Sur">Distrito Sur: $5.40 por kWh</option>
+                    <option value="Oeste">Distrito Oeste: $5.35 por kWh</option>
+                    <option value="Norte">Distrito Norte: $5.60 por kWh</option>
+                </select>
+                
+            </div>
+
+            <div class="container-form-number">
+                <label for="">Cantidad de kWh del mes :</label>
+                <input type="number" name="cantidad" id="kws">
+            </div> 
+            <div class="container-form-button">
+                <button type="button" value="Enviar" onclick="funciones()" id="calcular">Calcular</button>
+            </div>
+            <div id="p">
+                <p>-</p>
+            </div>    
+        </div>
+    </form>
+</body>
+</html>
